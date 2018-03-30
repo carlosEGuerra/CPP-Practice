@@ -1,1 +1,3 @@
-g++ -std=c++14 -o EcoSim EcoSim.cpp
+#!/bin/sh
+g++ -std=c++1z -o EcoSim EcoSim.cpp
+./EcoSim

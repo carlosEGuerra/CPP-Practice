@@ -21,6 +21,10 @@ void incrementCounter(int* integer);
 
 void chartingFunction(double numberOfRabbits, double numberOfFoxes, double fractionalScaleFactor);
 
+/**
+Main should obtain the user input for the initial populations as well as check whether the input was valid.
+It shoudl then run the charting functions to print out the graph of changes in the population.
+*/
 int main()
 {
   //Initialization of Parameters
@@ -60,7 +64,7 @@ void updatePopulations(double g, double p, double c, double m, double K, double&
   double Rabbits = numRabbits;
   double Foxes = numFoxes;
 
-  //Calculates the change in each population
+  //Calculates the change in each population according to a delta function
   double deltaRabbits = g*numRabbits*(1-numRabbits/K) - p*numRabbits*numFoxes;
   double deltaFoxes = c*p*numRabbits*numFoxes - m*numFoxes;
 
@@ -78,11 +82,17 @@ void plotCharacter(int numberOfSpaces, char character)
   }
 
   //prints out a specified character
-  if(character == 'F' || character == '*')
+  if(character == 'F' || character == 'r')
   {
     cout << character << endl;
     return;
   }
+  if(character == '*')
+  {
+    cout << character << endl;
+    return;
+  }
+
 }
 
 void incrementCounter(int* integer)
