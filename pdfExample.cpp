@@ -45,7 +45,7 @@ int main (int argc, char **argv)
     /* add a new page object. */
     page = HPDF_AddPage (pdf);
     HPDF_Page_SetSize (page, HPDF_PAGE_SIZE_A5, HPDF_PAGE_PORTRAIT);
-//    print_grid  (pdf, page);
+    //print_grid  (pdf, page);
     font = HPDF_GetFont (pdf, "Helvetica", NULL);
     HPDF_Page_SetTextLeading (page, 20);
     HPDF_Page_SetGrayStroke (page, 0);
@@ -79,9 +79,7 @@ int main (int argc, char **argv)
         // This ugly function defines where any following text will be placed
         // on the page. The cos/sin stuff is actually defining a 2D rotation
         // matrix.
-        HPDF_Page_SetTextMatrix(page,
-                                cos(rad1), sin(rad1), -sin(rad1), cos(rad1),
-                                x, y);
+        HPDF_Page_SetTextMatrix(page, cos(rad1), sin(rad1), -sin(rad1), cos(rad1), x, y);
 
         // C-style strings are null-terminated. The last character must a 0.
         buf[0] = SAMP_TXT[i]; // The character to display
