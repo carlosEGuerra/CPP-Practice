@@ -1,2 +1,2 @@
 #!/bin/sh
-g++ -std=c++1z -o 
+g++ -std=c++1z -o pdfExample pdfExample.cpp
