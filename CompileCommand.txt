@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh   #runs as an executable on the shell
 g++ -std=c++1z -c pdfExample.cpp -I ./libharu/include/hpdf.h    #created the .o file with the needed dependencies
 g++ -Wall -std=c++1z -o pdfExampleTest pdfExample.o -L ./libharu/src -lhpdfs -lz    #makes the executable from the .o file with the supporting libraries
 ./pdfExampleTest    #runs the executable outputting the pdf file into the working directory
