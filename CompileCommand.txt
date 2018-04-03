@@ -1,3 +1,4 @@
 #!/bin/sh
 g++ -std=c++1z -c pdfExample.cpp -I ./libharu/include/hpdf.h
-g++ -Wall -std=c++1z -o pdfExample pdfExample.o -L ./libharu/include -lhpdfs -lz
+g++ -Wall -std=c++1z -o pdfExampleTest pdfExample.o -L ./libharu/src -lhpdfs -lz
+rm *.o
