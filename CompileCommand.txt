@@ -1,2 +1,2 @@
 #!/bin/sh
-g++ -std=c++1z -o pdfExample pdfExample.cpp
+g++ -std=c++1z -c pdfExample.cpp -i ./libharu/include/hpdf.h
