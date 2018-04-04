@@ -1,0 +1,2 @@
+#!/bin/sh
+rm pdfExampleTest.pdf   #removes the output file from the directory
