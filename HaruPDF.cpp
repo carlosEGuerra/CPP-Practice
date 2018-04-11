@@ -1,11 +1,7 @@
-/*
-This file was authored by Carlos Guerra
-This is a Facade class so that Haru will work
-*/
-
-include namespace std;
+#include <iostream>
 
 int main()
 {
-  return 1;
+  std::cout << "Hello World" << std::endl;
+  return 0;
 }
