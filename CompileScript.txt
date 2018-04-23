@@ -1,6 +1,6 @@
 #!/bin/sh   #runs as an executable on the shell
 g++ -std=c++1z -c pdfExample.cpp -I ./libharu/include/hpdf.h    #created the .o file with the needed dependencies
-g++ -Wall -std=c++1z -o pdfExampleTest pdfExample.o -L ./libharu/src -lhpdfs -lz    #makes the executable from the .o file with the supporting libraries
+g++ -Wall -std=c++1z -o pdfExampleTest pdfExample.o -L ./libharu/src -lhpdfs -lz    #makes the executable(pdfExampleTest) from the .o file with the supporting libraries using compile version c++1z(17)
 ./pdfExampleTest    #runs the executable outputting the pdf file into the working directory
 rm *.o pdfExampleTest   #removes all .o files and the pdfExampleTest executable
 open -a Adobe\ Acrobat ./pdfExampleTest.pdf   #opens the output file with the program Adobe Acrobat
